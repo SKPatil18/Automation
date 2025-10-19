@@ -125,7 +125,7 @@
 				</configuration>
 			</plugin>
 
-			<!-- Maven Surefire Plugin (for running TestNG tests) -->
+			<!-- https://github.com/SKPatil18/TutorialNinjaHybridFramework.git -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>

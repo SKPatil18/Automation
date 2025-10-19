@@ -10,8 +10,8 @@
         <methods>
           <include name="tearDown"/>
           <include name="verifyWithoutProduct"/>
-          <include name="setup"/>
           <include name="VerifyWithInvalidProduct"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- com.tutorialninja.testcases.SearchTest -->
     </classes>

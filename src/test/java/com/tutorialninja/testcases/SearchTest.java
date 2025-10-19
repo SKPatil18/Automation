@@ -1,5 +1,7 @@
 package com.tutorialninja.testcases;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -21,7 +23,7 @@ public class SearchTest extends Base{
 	}
 	
 	@BeforeMethod
-	public void setup() {
+	public void setup() throws MalformedURLException {
 		driver = initiliseBrowserAndOpenApplication(properties.getProperty("browserName"));
 	}
 	@AfterMethod
@@ -43,18 +45,18 @@ public class SearchTest extends Base{
 		HomePage homePage = new HomePage(driver);
 		homePage.enterProductInSearchField(testdata.getProperty("invalidProduct"));
 		searchPage = homePage.clickOnSearchButton();
-		Assert.assertTrue(searchPage.verifyInvalidProductMessage("ahash"));
+//		Assert.assertTrue(searchPage.verifyInvalidProductMessage("ahash"));
 
 		
 //		Assert.assertTrue(searchPage.checkProductName());	
 //		driver.findElement(By.xpath("//input[@name = \"search\"]")).sendKeys(testdata.getProperty("invalidProduct"));
 //		driver.findElement(By.xpath("//div[@id=\"search\"]/span/button")).click();
-//		
-//		String actualText = driver.findElement(By.xpath("//div[@id=\"content\"]/h2/following-sibling::p")).getText();
-//		
-//		Assert.assertEquals(actualText,testdata.getProperty("expectedInvalidProductName"));		
+		
+		String actualText = driver.findElement(By.xpath("//div[@id=\"content\"]/h2/following-sibling::p")).getText();
+		
+		Assert.assertEquals(actualText,testdata.getProperty("expectedInvalidProductName"));		
 	}
-	@Test(dependsOnMethods= {"VerifyWithInvalidProduct"})
+	@Test()
 	public void verifyWithoutProduct() {
 		HomePage homePage = new HomePage(driver);
 		homePage.enterProductInSearchField("");

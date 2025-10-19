@@ -1,6 +1,7 @@
 package com.tutorialninja.testcases;
 
 import java.awt.RenderingHints.Key;
+import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.Date;
 
@@ -12,6 +13,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.tutorialninja.base.Base;
@@ -30,7 +32,7 @@ public class RegisterTest extends Base{
 	}
 	
 	@BeforeMethod
-	public void setup() {
+	public void setup() throws MalformedURLException {
 		driver = initiliseBrowserAndOpenApplication(properties.getProperty("browserName"));
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnMyAccount();

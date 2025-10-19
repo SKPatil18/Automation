@@ -1,5 +1,6 @@
 package com.tutorialninja.testcases;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.Date;
 
@@ -31,7 +32,7 @@ public class LoginTest extends Base{
 	}
 	
 	@BeforeMethod
-	public void setup() {
+	public void setup() throws MalformedURLException {
 		driver = initiliseBrowserAndOpenApplication(properties.getProperty("browserName"));
 		HomePage homePage = new HomePage(driver);
 		homePage.clickOnMyAccount();
