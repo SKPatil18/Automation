@@ -56,6 +56,11 @@ public class Base {
 //		}else if(browserName.equalsIgnoreCase("Edge")) {
 //			driver = new EdgeDriver();
 //		}
+//		if(browserName.equalsIgnoreCase("chrome")) {
+//		driver = new ChromeDriver();
+//	}else if(browserName.equalsIgnoreCase("Edge")) {
+//		driver = new EdgeDriver();
+//	}
 		
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName(browserName);
