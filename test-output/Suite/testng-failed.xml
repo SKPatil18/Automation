@@ -10,30 +10,18 @@
         <methods>
           <include name="setup"/>
           <include name="verifyRegisteringAccWithExistingEmail"/>
-          <include name="verifyRegisteringAccWithMandFields"/>
           <include name="teatDown"/>
           <include name="verifyRegisteringAccWithAllFields"/>
         </methods>
       </class> <!-- com.tutorialninja.testcases.RegisterTest -->
       <class name="com.tutorialninja.testcases.LoginTest">
         <methods>
-          <include name="loginWithValidCredentials"/>
-          <include name="loginWithInvalidCredentials"/>
+          <include name="loginWithValidCredentials" invocation-numbers="0 1"/>
           <include name="setup"/>
           <include name="verifyWithInalidEmailAndValidPassword"/>
-          <include name="verifyWithValidEmailAndInvalidPassword"/>
           <include name="teatDown"/>
         </methods>
       </class> <!-- com.tutorialninja.testcases.LoginTest -->
-      <class name="com.tutorialninja.testcases.SearchTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyWithoutProduct"/>
-          <include name="setup"/>
-          <include name="VerifyWithInvalidProduct"/>
-          <include name="verifyWithValidProduct"/>
-        </methods>
-      </class> <!-- com.tutorialninja.testcases.SearchTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
