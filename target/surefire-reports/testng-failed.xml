@@ -6,14 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="com.tutorialninja.testcases.SearchTest">
+      <class name="com.tutorialninja.testcases.RegisterTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyWithoutProduct"/>
-          <include name="VerifyWithInvalidProduct"/>
           <include name="setup"/>
+          <include name="verifyRegisteringAccWithExistingEmail"/>
+          <include name="verifyRegisteringAccWithMandFields"/>
+          <include name="teatDown"/>
+          <include name="verifyRegisteringAccWithAllFields"/>
         </methods>
-      </class> <!-- com.tutorialninja.testcases.SearchTest -->
+      </class> <!-- com.tutorialninja.testcases.RegisterTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
